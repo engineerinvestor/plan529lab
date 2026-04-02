@@ -1,0 +1,10 @@
+"""Package-wide constants for plan529lab."""
+
+# Federal 529/QTP
+FEDERAL_ADDITIONAL_TAX_RATE: float = 0.10
+
+# Roth IRA rollover from 529 (post-SECURE 2.0)
+ROTH_ROLLOVER_LIFETIME_CAP: float = 35_000.0
+ROTH_ROLLOVER_ACCOUNT_AGE_YEARS: int = 15
+ROTH_ROLLOVER_CONTRIBUTION_LOOKBACK_YEARS: int = 5
+ROTH_ROLLOVER_ANNUAL_LIMIT: float = 7_000.0  # 2024 IRA contribution limit

@@ -1,0 +1,50 @@
+# Scholarship case: significant tax-free aid reduces AQEE
+# Child receives $25,000/year scholarship against $40,000/year expenses
+
+tax_profile:
+  ordinary_income_rate: 0.35
+  ltcg_rate: 0.15
+  qualified_dividend_rate: 0.15
+  niit_rate: 0.038
+
+portfolio_assumptions:
+  annual_return: 0.07
+  dividend_yield: 0.015
+  qualified_dividend_share: 0.95
+  turnover_realization_rate: 0.05
+
+qtp_assumptions:
+  roth_rollover_enabled: true
+
+scenario_policy:
+  leftover_resolution: withdraw_nonqualified
+  qualified_use_probability: 0.80
+
+qtp_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: qtp
+
+taxable_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: taxable
+
+education_schedule:
+  items:
+    - date: "2043-09-01"
+      qualified_expense: 40000
+      tax_free_assistance: 25000
+    - date: "2044-09-01"
+      qualified_expense: 40000
+      tax_free_assistance: 25000
+    - date: "2045-09-01"
+      qualified_expense: 40000
+      tax_free_assistance: 25000
+    - date: "2046-09-01"
+      qualified_expense: 40000
+      tax_free_assistance: 25000
+
+horizon_years: 18

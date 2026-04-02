@@ -1,0 +1,44 @@
+# AOTC overlap case: expenses allocated to education credits reduce AQEE
+# $4,000 allocated to AOTC in each of the first 2 years
+
+tax_profile:
+  ordinary_income_rate: 0.24
+  ltcg_rate: 0.15
+  qualified_dividend_rate: 0.15
+
+portfolio_assumptions:
+  annual_return: 0.07
+  dividend_yield: 0.015
+  qualified_dividend_share: 0.95
+  turnover_realization_rate: 0.05
+
+scenario_policy:
+  leftover_resolution: withdraw_nonqualified
+  qualified_use_probability: 0.90
+
+qtp_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: qtp
+
+taxable_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: taxable
+
+education_schedule:
+  items:
+    - date: "2043-09-01"
+      qualified_expense: 30000
+      aotc_or_llc_allocated_expense: 4000
+    - date: "2044-09-01"
+      qualified_expense: 30000
+      aotc_or_llc_allocated_expense: 4000
+    - date: "2045-09-01"
+      qualified_expense: 30000
+    - date: "2046-09-01"
+      qualified_expense: 30000
+
+horizon_years: 18

@@ -1,0 +1,58 @@
+# Roth rollover case: mixed resolution with Roth IRA rollover
+# 70% qualified use, 20% Roth rollover, 10% nonqualified withdrawal
+
+tax_profile:
+  ordinary_income_rate: 0.35
+  ltcg_rate: 0.15
+  qualified_dividend_rate: 0.15
+  niit_rate: 0.038
+  state_ordinary_rate: 0.00
+
+portfolio_assumptions:
+  annual_return: 0.07
+  dividend_yield: 0.015
+  qualified_dividend_share: 0.95
+  turnover_realization_rate: 0.05
+  expense_ratio: 0.0003
+
+qtp_assumptions:
+  roth_rollover_enabled: true
+  beneficiary_change_allowed: true
+
+scenario_policy:
+  leftover_resolution: mixed
+  qualified_use_probability: 0.70
+  roth_rollover_fraction: 0.20
+
+qtp_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: qtp
+    - date: "2026-01-01"
+      amount: 10000
+      account_type: qtp
+    - date: "2027-01-01"
+      amount: 10000
+      account_type: qtp
+
+taxable_contributions:
+  items:
+    - date: "2025-01-01"
+      amount: 10000
+      account_type: taxable
+    - date: "2026-01-01"
+      amount: 10000
+      account_type: taxable
+    - date: "2027-01-01"
+      amount: 10000
+      account_type: taxable
+
+education_schedule:
+  items:
+    - date: "2043-09-01"
+      qualified_expense: 30000
+      tax_free_assistance: 5000
+      aotc_or_llc_allocated_expense: 4000
+
+horizon_years: 18
