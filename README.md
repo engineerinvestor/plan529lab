@@ -1,5 +1,10 @@
 # plan529lab
 
+[![CI](https://github.com/engineerinvestor/plan529lab/actions/workflows/ci.yml/badge.svg)](https://github.com/engineerinvestor/plan529lab/actions/workflows/ci.yml)
+[![PyPI](https://img.shields.io/pypi/v/plan529lab)](https://pypi.org/project/plan529lab/)
+[![Python](https://img.shields.io/pypi/pyversions/plan529lab)](https://pypi.org/project/plan529lab/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/engineerinvestor/plan529lab/blob/main/LICENSE)
+
 A Python package for evaluating the after-tax tradeoff between investing through a **529/Qualified Tuition Program (QTP)** and a **taxable brokerage account** for education savings.
 
 This is not a simple "529 penalty calculator." It is a **scenario engine** that compares after-tax outcomes across multiple future states — including qualified education use, nonqualified withdrawal, beneficiary change, and Roth IRA rollover paths.
